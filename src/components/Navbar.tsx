@@ -28,7 +28,7 @@ export default function Navbar() {
     const {loggedIn, user, form: [_showForm, setShowForm]} = useContext(AuthContext)
 
     const navigate = useNavigate();
-    if (show)
+    // if (show)
         return (
             <nav className={'w-full h-max sticky top-0 z-40 bg-white border-b'}>
                 <div className={'w-[95%] h-[70px] m-auto flex justify-between'}>
@@ -37,6 +37,7 @@ export default function Navbar() {
                         Nairobi
                     </Title>
                     <div className={"flex justify-around h-max gap-2 mb-auto mt-auto"}>
+                        <Anchor href="/" className={'m-auto pl-2 pr-2'}>Home</Anchor>
                         <Anchor href={'/about'} className={'m-auto pl-2 pr-2'}>About</Anchor>
                         <Button
                             variant={"light"}
@@ -49,6 +50,6 @@ export default function Navbar() {
                 </div>
             </nav>
         )
-    return <></>
+    // return <></>
 }
 
